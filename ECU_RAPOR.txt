@@ -1,0 +1,37 @@
+# ECU Diagnostic Tool
+Türk Traktör Samtec & PEAK USB ile uyumlu Python-based ECU analyzer.
+
+## 🎯 Proje Açıklaması
+Bu proje, Türk Traktör'ün Samtec diagnostik sistemi ile uyumlu olarak tasarlanmış bir ECU (Engine Control Unit) analiz aracıdır. 
+
+- **CAN Bus** protokolü üzerinden ECU verisi okuma
+- **J1939** formatında hata kodlarının otomatik çevirisi
+- Profesyonel rapor oluşturma
+- PEAK PCAN-USB FD donanımı desteği
+
+## 🔧 Teknoloji Stack
+- **Python 3.14+**
+- **python-can** - CAN Bus iletişimi
+- **PEAK PCAN-USB FD** - Hardware interface
+
+## 📋 Dosyalar
+- `can_simulator.py` - CAN mesajlarını simüle eder
+- `can_decoder.py` - CAN ID'leri ECU hata kodlarına çevirir
+- `ecu_analyzer.py` - Ana program, rapor oluşturur
+- `ecu_rapor.py` - Hata kod analiz modülü
+
+## 💾 Kurulum
+
+```bash
+pip install python-can
+```
+
+## 🚀 Kullanım
+
+```bash
+python ecu_analyzer.py
+```
+
+Rapor otomatik `ECU_RAPOR.txt` dosyasına kaydedilir.
+
+## 📊 Çıktı Örneği
